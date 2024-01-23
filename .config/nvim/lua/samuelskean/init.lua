@@ -5,3 +5,7 @@ require("samuelskean.fourSpaceTabs")
 -- relative number elsewhere):
 vim.wo.number = true
 vim.wo.relativenumber = true
+
+-- Enable showing dots on trailing whitespace:
+vim.wo.listchars = "trail:·"
+vim.wo.list = true
