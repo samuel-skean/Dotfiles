@@ -1,6 +1,5 @@
 require("samuelskean.remap")
 require("samuelskean.fourSpaceTabs")
-require("samuelskean.autocmd-test")
 
 -- Enable hybrid line numbers (absolute number on the current line,
 -- relative number elsewhere):
