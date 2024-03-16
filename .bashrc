@@ -25,3 +25,6 @@ fi
 unset rc
 
 . "$HOME/.cargo/env"
+
+# My only contribution so far to this .bashrc:
+export EDITOR="/usr/bin/nvim"
