@@ -1,0 +1,16 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Samuel Skean
+	email = sskean2@uic.edu
+	signingkey = /Users/samuelskean/.ssh/github.pub
+# Please adapt and uncomment the following lines:
+#	name = Samuel Skean
+#	email = sskean2@uic.edu
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[alias]
+	dotfiles = !git --work-tree=$HOME --git-dir=.dotfiles-git
