@@ -2,10 +2,7 @@
 [user]
 	name = Samuel Skean
 	email = sskean2@uic.edu
-	signingkey = /Users/samuelskean/.ssh/github.pub
-# Please adapt and uncomment the following lines:
-#	name = Samuel Skean
-#	email = sskean2@uic.edu
+	signingkey = /Users/samuelskean/.ssh/id_rsa.pub
 [gpg]
 	format = ssh
 [commit]
@@ -13,4 +10,4 @@
 [init]
 	defaultBranch = main
 [alias]
-	dotfiles = !git --work-tree=$HOME --git-dir=.dotfiles-git
+	dotfiles = !git --work-tree=$HOME --git-dir=Dotfiles.git
