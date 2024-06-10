@@ -1,0 +1,6 @@
+[submodule "bin"]
+	path = bin
+	url = github:samuel-skean/ShellScripts.git
+[submodule "NixConfig"]
+	path = NixConfig
+	url = github:samuel-skean/NixConfig.git
