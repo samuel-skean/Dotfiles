@@ -1,5 +1,6 @@
 export PATH="$PATH:$HOME/bin"
 export PATH="$HOME/NixConfig/result/bin:$PATH"
+export PATH="$HOME/tools/flutter:$PATH"
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 
