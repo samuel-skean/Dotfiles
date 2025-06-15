@@ -1,3 +1,10 @@
+# This repo does use at least one `.gitignore` file in a nested directory in the same repo.
+
+# This is redundant, but it feels clearer to include `.DS_Store` explicitly.
+.DS_Store
 *
 !.gitignore
-!.config/*
+
+# I gotta do this, or git will never even look in `.config`!
+# See https://git-scm.com/docs/gitignore.
+!.config/
