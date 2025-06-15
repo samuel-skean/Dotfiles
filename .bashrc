@@ -12,6 +12,14 @@ esac
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path bash)"
 # End from macOS ~/.bashrc.
 
+# Check if it's macOS.
+if command -v sw_vers --productName --productVersion >/dev/null; then
+    if [[ $(sw_vers --productName) == "macOS" ]]; then
+        is_macos=1
+        macos_version="$(sw_vers --productVersion)"
+    fi
+fi
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -69,7 +77,9 @@ unset color_prompt force_color_prompt
 
 # From .zprofile 20250608 TODO: Update or remove timestamp.
 #
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ "${is_macos}" == "1" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -104,3 +114,6 @@ PS0=$'\x1b[6 q'
 # This should likely be removed, but for now, it's better to have it and not need it, yada yada.
 export PATH="/usr/local/opt/postgresql@17/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+
+unset is_macos macos_version
