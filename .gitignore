@@ -9,19 +9,19 @@
 .DS_Store
 .Trash*
 # No idea what this is:
-.CFUserTextEncoding
 .bash_history*
 .bash_logout
 .cargo/
+.CFUserTextEncoding
 # The history of my `less` searches! And maybe other things in `less`:
 .lesshst
-.viminfo
+.nvm
 .psql_history
 .pyenv/
 .python_history
+.viminfo
 .vscode-server/
 .wget-hsts
-.nvm
 .zsh_history
 
 # I gotta do this, or git will never even look in `.config`!
