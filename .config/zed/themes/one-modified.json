@@ -1,10 +1,10 @@
 {
   "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
   "name": "One",
-  "author": "Zed Industries",
+  "author": "Zed Industries, Samuel Skean",
   "themes": [
     {
-      "name": "One Dark",
+      "name": "One Dark - Modified by Samuel Skean",
       "appearance": "dark",
       "style": {
         "border": "#464b57ff",
@@ -195,7 +195,7 @@
             "font_weight": null
           },
           "comment": {
-            "color": "#5d636fff",
+            "color": "#a2a3a7ff",
             "font_style": null,
             "font_weight": null
           },
@@ -383,7 +383,7 @@
       }
     },
     {
-      "name": "One Light",
+      "name": "One Light - Modified by Samuel Skean",
       "appearance": "light",
       "style": {
         "border": "#c9c9caff",
@@ -574,7 +574,7 @@
             "font_weight": null
           },
           "comment": {
-            "color": "#a2a3a7ff",
+            "color": "#5d636fff",
             "font_style": null,
             "font_weight": null
           },

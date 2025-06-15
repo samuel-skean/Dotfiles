@@ -37,8 +37,8 @@
   "buffer_font_size": 13,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
+    "light": "One Light - Modified by Samuel Skean",
+    "dark": "One Dark - Modified by Samuel Skean"
   },
   // # My manipulations (does this comment get overwritten?):
 
@@ -54,13 +54,5 @@
   "preferred_line_length": 80,
 
   // I currently only have zed installed as a cask via brew. I intend to keep zed managed by package managers wherever I use it. I don't want it auto-updating.
-  "auto_update": false,
-
-  "experimental.theme_overrides": {
-    "syntax": {
-      "comment": {
-        "color": "#a2a3a7ff"
-      }
-    }
-  }
+  "auto_update": false
 }
