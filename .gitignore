@@ -24,6 +24,9 @@
 .wget-hsts
 .zsh_history
 
-# I gotta do this, or git will never even look in `.config`!
+# I gotta do this (well I would, if it weren't for the `!.*` line above),
+# or git will never even look in `.config` or `.local`!
 # See https://git-scm.com/docs/gitignore.
 !.config/
+!.local/
+
