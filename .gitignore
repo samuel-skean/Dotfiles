@@ -10,13 +10,17 @@
 .Trash*
 # No idea what this is:
 .CFUserTextEncoding
-.bash_history
+.bash_history*
+.bash_logout
 .cargo/
 # The history of my `less` searches! And maybe other things in `less`:
 .lesshst
 .viminfo
 .psql_history
+.pyenv/
 .python_history
+.vscode-server/
+.wget-hsts
 .nvm
 .zsh_history
 
