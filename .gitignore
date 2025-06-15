@@ -5,6 +5,21 @@
 *
 !.gitignore
 
+!.*
+.DS_Store
+.Trash*
+# No idea what this is:
+.CFUserTextEncoding
+.bash_history
+.cargo/
+# The history of my `less` searches! And maybe other things in `less`:
+.lesshst
+.viminfo
+.psql_history
+.python_history
+.nvm
+.zsh_history
+
 # I gotta do this, or git will never even look in `.config`!
 # See https://git-scm.com/docs/gitignore.
 !.config/
