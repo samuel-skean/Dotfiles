@@ -1,0 +1,66 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+//
+// My note: All of my configurations assume the availability of the default configuration for zed, including its comments, for me to understand them.
+{
+  "ssh_connections": [
+    {
+      "host": "quads3",
+      "projects": [
+        {
+          "paths": ["/home/sskean2/compound"]
+        },
+        {
+          "paths": ["/home/sskean2/folly-refactor"]
+        },
+        {
+          "paths": ["/home/sskean2/rust"]
+        }
+      ]
+    },
+    {
+      "host": "armDebianVM",
+      "projects": [
+        {
+          "paths": ["/home/samuel/Coding/MessingWithUnixInterfaces"]
+        }
+      ]
+    }
+  ],
+  "ui_font_size": 16,
+  "buffer_font_size": 13,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  // # My manipulations (does this comment get overwritten?):
+
+  // Vim editing:
+  "vim_mode": true, // Also overridable from the UI. I sorta wish that could be disabled!
+  "vim": {
+    // With this set, line numbers are relative in vim's normal mode and absolute in vim's insert mode.
+    "toggle_relative_line_numbers": true
+  },
+  // Soft wrapping:
+  "soft_wrap": "preferred_line_length",
+  // Default, but for clarity. Used by above setting.
+  "preferred_line_length": 80,
+
+  // I currently only have zed installed as a cask via brew. I intend to keep zed managed by package managers wherever I use it. I don't want it auto-updating.
+  "auto_update": false,
+
+  "experimental.theme_overrides": {
+    "syntax": {
+      "comment": {
+        "color": "#a2a3a7ff"
+      }
+    }
+  }
+}
