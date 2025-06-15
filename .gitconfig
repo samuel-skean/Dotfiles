@@ -12,4 +12,4 @@
 [init]
 	defaultBranch = main
 [alias]
-	dotfiles = !git --work-tree=$HOME --git-dir=Dotfiles.git
+	dotfiles = !git --work-tree=${HOME} --git-dir=${HOME}/Dotfiles.git
