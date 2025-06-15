@@ -1,4 +1,5 @@
 {
+  "__samuel_skean_comment__" : "All I did to the Zed one.json theme to make it into this was to swap the comment colors between the 'One Light' and 'One Dark' themes. Of course, believe the .patch file in this directory over this comment.",
   "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
   "name": "One",
   "author": "Zed Industries, Samuel Skean",

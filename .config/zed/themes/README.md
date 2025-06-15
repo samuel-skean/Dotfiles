@@ -7,3 +7,7 @@ Rationale for storing the patch file and not the original theme:
 I want the thing I maintain to be a way I *get* from the official theme to the one I want. I want to acknowledge one single source of truth for a given version of the official zed theme. If those "permalinks" aren't permanent, god help me.
 Unfortunately, with the way I currently generate the patch files, the patch files end up including several lines of unchanged text that likely means applying it to significantly different files would fail - but for reasons I likely wouldn't care about.
 Also unfortunately, if stuff *moves around* in the file that zed maintains (that I want to apply my patch to), then I'm probably up a creek without a paddle in terms of *automatically* applying the patch. But at that point, I can still go back to the zed github - and start writing a new patch file, with my human brain.
+
+Quick Note:
+There are also "comments" (in the form of funny little otherwise-meaningless key-value pairs) in the theme json file(s). They explain the rationale of the choices in the theme(s) themselves.
+JSON not having comments is not remotely my favorite thing.
