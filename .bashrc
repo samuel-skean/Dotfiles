@@ -1,6 +1,7 @@
 # .bashrc
 
 # Lots of this came from the default .bashrc from Debian 12. Some of that is called out. Some of it is not.
+# Some of the stuff that is called out has since been changed. See the git history of my dotfiles repo for details.
 
 # If not running interactively, don't do anything
 case $- in
@@ -69,9 +70,16 @@ if [ -n "${force_color_prompt}" ]; then
 fi
 
 if [ "${color_prompt}" = yes ]; then
-    # CONSIDER: Making the color somehow dependent on the machine, so I can easily see what machine I'm on with a glance at the prompt.
+    garish_green='\[\033[01;32m\]'
+    nicer_light_blue='\[\033[01;36m\]'
+    if [[ "${is_macos}" == '1' ]]; then
+        hostname_color="${nicer_light_blue}"
+    else
+        hostname_color="${garish_green}"
+    fi
     # TODO: Can I add {}'s in here arouhd some instances of debian_chroot? is it as necessary/nice to preemptively avoid ambiguity as it is elsewhere?
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}'"${garish_green}"'\u@'"${hostname_color}"'\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    unset garish_green nicer_light_blue hostname_color
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
