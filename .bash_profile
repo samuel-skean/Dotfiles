@@ -1,5 +1,4 @@
-#!/bin/env bash
-# The above line is so `shellcheck` knows what shell this script is intended for.
+# shellcheck shell=bash
 
 # Adapted from `[ilmari-karonen](https://unix.stackexchange.com/users/9334/ilmari-karonen)`'s answer on http://unix.stackexchange.com/questions/119627/why-are-interactive-shells-on-osx-login-shells-by-default:
 # Of particular note from that answer:
