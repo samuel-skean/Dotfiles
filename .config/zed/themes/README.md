@@ -1,6 +1,6 @@
 Three invariants about the patch file:
 1. The patch file is generated with `git diff --no-index`, given two paths.
-2. This patch file takes you from https://github.com/zed-industries/zed/blob/<SHA-1 hash of git object that goes in github urls like this - probably tree?>/assets/themes/one/one.json to one-modified.json in this directory, where that git hash placeholder is replaced by part before the first hyphen of the patch file's name. The patch file's name is of the form '<SHA-1 hash of git object that goes in github urls like those listed previously - probably tree?>-one-to-one-modified.patch'. ...Yes, the 'one-to-one-modified' part of the name is pretty unreadable and trips me up often. CONSIDER: Changing that part of the name.
+2. This patch file takes you from https://github.com/zed-industries/zed/blob/<SHA-1 hash of git commit>/assets/themes/one/one.json to one-modified.json in this directory, where that git hash placeholder is replaced by part before the first hyphen of the patch file's name. The patch file's name is of the form '<SHA-1 hash of git commit>-one-to-one-modified.patch'. ...Yes, the 'one-to-one-modified' part of the name is pretty unreadable and trips me up often. CONSIDER: Changing that part of the name.
 3. Keep the name of the "original" (maintained by zed on github) file written in the .gitignore directory in this current directory (themes) up-to-date. This needs changing whenever I base my theme off a new theme.
 
 Rationale for storing the patch file and not the original theme:
