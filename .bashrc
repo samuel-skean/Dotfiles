@@ -1,3 +1,5 @@
+#!/bin/env bash
+# The above line is so `shellcheck` knows what shell this script is intended for.
 # .bashrc
 
 # Lots of this came from the default .bashrc from Debian 12. Some of that is called out. Some of it is not.
@@ -32,7 +34,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-if ! [[ "${PATH}" =~ "${HOME}/.local/bin:${HOME}/bin:" ]]; then
+if ! [[ "${PATH}" =~ "${HOME}"/.local/bin:"${HOME}"/bin: ]]; then
     PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}"
 fi
 export PATH
