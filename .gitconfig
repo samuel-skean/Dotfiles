@@ -11,5 +11,3 @@
 	allowedSignersFile = ~/.ssh/allowed_signers
 [init]
 	defaultBranch = main
-[alias]
-	dotfiles = !git --work-tree=${HOME} --git-dir=${HOME}/Dotfiles.git
