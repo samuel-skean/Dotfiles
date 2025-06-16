@@ -14,3 +14,6 @@
 # As macOS's built-in bash is *very old* and doesn't do what I expect w.r.t. setting the cursor shape in .inputrc and navigating the command line with alt+<arrows>, I'd like to be alerted whenever I'm using it, even if this isn't a perfect way.
 # These comments apply on 20250615, and to macOS 15.5.
 # export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Added by swiftly
+. "/home/samuel/.local/share/swiftly/env.sh"
