@@ -28,7 +28,9 @@ TERM_PROGRAM="${TERM_PROGRAM:-}"
 is_macos=0 # By default, we aren't macos :).
 
 # Check if it's macOS.
-if command -v sw_vers --productName --productVersion >/dev/null; then
+if command -v sw_vers >/dev/null; then
+    # Make sure `sw_vers` behaves roughly likely I expect it to, not erroring when given these options:
+    sw_vers --productName --productVersion >/dev/null
     if [[ $(sw_vers --productName) == "macOS" ]]; then
         is_macos=1
         macos_version="$(sw_vers --productVersion)"
