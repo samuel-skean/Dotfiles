@@ -11,8 +11,14 @@ case $- in
       *) return;;
 esac
 
+function enable_error_trap {
+    trap 'echo [message from samuel-skean] Error in .bashrc on line $LINENO. ; exec bash --norc --noprofile' ERR
+}
+function disable_error_trap {
+    trap '' ERR # CONSIDER: It isn't clear to me why this produces the behavior I want but `trap - ERR` doesn't. See `help trap`.
+}
 set -u # Prints a message on unset variables. Continues executing .bashrc. This is quite disappointing. If combined with set `-e`, this would cause the shell to terminate when accessing unset variables, which is more undesirable.
-trap 'echo Error on line $LINENO. ; exec bash --norc --noprofile' ERR
+enable_error_trap
 
 TERM_PROGRAM="${TERM_PROGRAM:-}"
 # From macOS ~/.bashrc (but almost certainly *not* a default part of macOS. Almost certainly put there by VSCode.)
@@ -31,7 +37,9 @@ fi
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
+    disable_error_trap
     . /etc/bashrc
+    enable_error_trap
 fi
 
 # User specific environment
@@ -139,5 +147,5 @@ alias ls='ls --color=auto'
 
 unset is_macos macos_version
 
-trap - ERR # Reset handling of ERR to default.
+disable_error_trap
 set +u # Very important that this be here before shell becomes interactive!
