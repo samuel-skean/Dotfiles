@@ -134,6 +134,7 @@ export PATH="/opt/homebrew/opt/postgresql@17/bin:${PATH}"
 
 # Aliases:
 alias git-df='git --work-tree="${HOME}" --git-dir="${HOME}/Dotfiles.git"'
+alias ls='ls --color=auto'
 
 unset is_macos macos_version
 
