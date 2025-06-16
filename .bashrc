@@ -77,7 +77,7 @@ if [ "${color_prompt}" = yes ]; then
     else
         hostname_color="${garish_green}"
     fi
-    # TODO: Can I add {}'s in here arouhd some instances of debian_chroot? is it as necessary/nice to preemptively avoid ambiguity as it is elsewhere?
+    # TODO: Can I add {}'s in here around some instances of debian_chroot? is it as necessary/nice to preemptively avoid ambiguity as it is elsewhere?
     PS1='${debian_chroot:+($debian_chroot)}'"${garish_green}"'\u@'"${hostname_color}"'\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     unset garish_green nicer_light_blue hostname_color
 else
