@@ -11,7 +11,8 @@ case $- in
       *) return;;
 esac
 
-# set -eu # Fail early if anything fails. Make sure to undo this at the end of the script!
+set -u # Prints a message on unset variables. Continues executing .bashrc. This is quite disappointing. If combined with set `-e`, this would cause the shell to terminate when accessing unset variables, which is more undesirable.
+trap 'echo Error on line $LINENO. ; exec bash --norc --noprofile' ERR
 
 TERM_PROGRAM="${TERM_PROGRAM:-}"
 # From macOS ~/.bashrc (but almost certainly *not* a default part of macOS. Almost certainly put there by VSCode.)
@@ -138,4 +139,5 @@ alias ls='ls --color=auto'
 
 unset is_macos macos_version
 
-set +eu # Very important that this be here before shell becomes interactive!
+trap - ERR # Reset handling of ERR to default.
+set +u # Very important that this be here before shell becomes interactive!
