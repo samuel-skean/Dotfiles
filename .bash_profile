@@ -15,5 +15,6 @@
 # These comments apply on 20250615, and to macOS 15.5.
 # export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# Added by swiftly
-. "/home/samuel/.local/share/swiftly/env.sh"
+# Added by swiftly, modified by samuel-skean (see commit history).
+# See https://specifications.freedesktop.org/basedir-spec/latest/#variables for why all the variable shenanigans.
+[[ ! -r "${XDG_DATA_HOME:-${HOME}/.local/share}/swiftly/env.sh" ]] || source "${XDG_DATA_HOME:-${HOME}/.local/share}/swiftly/env.sh"
