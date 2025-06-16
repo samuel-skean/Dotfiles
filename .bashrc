@@ -8,9 +8,14 @@ case $- in
       *) return;;
 esac
 
+# set -eu # Fail early if anything fails. Make sure to undo this at the end of the script!
+
+TERM_PROGRAM="${TERM_PROGRAM:-}"
 # From macOS ~/.bashrc (but almost certainly *not* a default part of macOS. Almost certainly put there by VSCode.)
 [[ "${TERM_PROGRAM}" == "vscode" ]] && . "$(code --locate-shell-integration-path bash)"
 # End from macOS ~/.bashrc.
+
+is_macos=0 # By default, we aren't macos :).
 
 # Check if it's macOS.
 if command -v sw_vers --productName --productVersion >/dev/null; then
@@ -46,6 +51,7 @@ case "${TERM}" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
+force_color_prompt=""
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -118,3 +124,5 @@ export PATH="/opt/homebrew/opt/postgresql@17/bin:${PATH}"
 
 
 unset is_macos macos_version
+
+set +eu # Very important that this be here before shell becomes interactive!
