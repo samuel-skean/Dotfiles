@@ -28,6 +28,12 @@
       "host": "armDebianVM",
       "projects": [
         {
+          "paths": ["/home/samuel/.local/bin"]
+        },
+        {
+          "paths": ["/home/samuel/Coding/MessingWithLanguages/Swift"]
+        },
+        {
           "paths": ["/home/samuel/Coding/MessingWithUnixInterfaces"]
         }
       ]
