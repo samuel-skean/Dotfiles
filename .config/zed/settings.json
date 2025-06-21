@@ -58,6 +58,19 @@
   "soft_wrap": "preferred_line_length",
   // Default, but for clarity. Used by above setting.
   "preferred_line_length": 80,
+  // Files or globs of files that will be excluded by Zed entirely. They will be skipped during file
+  // scans, file searches, and not be displayed in the project file tree. Takes precedence over `file_scan_inclusions`.
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings"
+  ],
 
   // I currently only have zed installed as a cask via brew. I intend to keep zed managed by package managers wherever I use it. I don't want it auto-updating.
   "auto_update": false
