@@ -62,7 +62,7 @@
   // scans, file searches, and not be displayed in the project file tree. Takes precedence over `file_scan_inclusions`.
   // KNOWN WEIRDNESS as of 20250621: While remote editing, it seems like the below setting is only respected if specified on the remote machine (including when specified in `.zed/settings.json` and when specified in `~/.config/zed/settings.json` on the remote machine.
   "file_scan_exclusions": [
-    // I want zed to let me edit files in my `.git`. I don't particularly want those files to show up in the gutter (the side of my window), but this seems to be the only way to get zed to let me interact with them at all.
+    // I want zed to let me edit files in my `.git`. I don't particularly want those files to show up in the gutter (the side of my window), but this does that, and it seems to be the only way to get zed to let me edit them at all.
     // Once I do this for git, might as well do it for all these other VCS's. But I'm them here in commented-out form to slightly increase the ease of ignoring them.
     //    "**/.git",
     //    "**/.svn",
