@@ -57,16 +57,20 @@
   // Soft wrapping:
   "soft_wrap": "preferred_line_length",
   // Default, but for clarity. Used by above setting.
-  "preferred_line_length": 80,
+  "preferred_line_length": 120,
   // Files or globs of files that will be excluded by Zed entirely. They will be skipped during file
   // scans, file searches, and not be displayed in the project file tree. Takes precedence over `file_scan_inclusions`.
+  // KNOWN WEIRDNESS as of 20250621: While remote editing, it seems like the below setting is only respected if specified on the remote machine (including when specified in `.zed/settings.json` and when specified in `~/.config/zed/settings.json` on the remote machine.
   "file_scan_exclusions": [
-    "**/.git",
-    "**/.svn",
-    "**/.hg",
-    "**/.jj",
-    "**/CVS",
-    "**/.DS_Store",
+    // I want zed to let me edit files in my `.git`. I don't particularly want those files to show up in the gutter (the side of my window), but this seems to be the only way to get zed to let me interact with them at all.
+    // Once I do this for git, might as well do it for all these other VCS's. But I'm them here in commented-out form to slightly increase the ease of ignoring them.
+    //    "**/.git",
+    //    "**/.svn",
+    //    "**/.hg",
+    //    "**/.jj",
+    //    "**/CVS",
+    // I don't want zed to ignore .DS_Store by default. I want it to show up just like other .gitignored files. This is so I'm more likely to see if I'm not ignoring it.
+    //    "**/.DS_Store",
     "**/Thumbs.db",
     "**/.classpath",
     "**/.settings"
