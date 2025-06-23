@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
--- macOS brain moment. 
+-- macOS brain moment.
 -- CONSIDER: making this dependent on the OS.
 -- It may only work on macOS anyway, I have no trivial way to check its behavior on other machines at the moment.
 config.quit_when_all_windows_are_closed = false
@@ -16,7 +16,7 @@ config.audible_bell = 'Disabled'
 config.visual_bell = {
     fade_in_duration_ms = 75,
     fade_out_duration_ms = 75,
---    target = 'CursorColor', -- CursorColor seems to only intermittently work.
+    --    target = 'CursorColor', -- CursorColor seems to only intermittently work.
 }
 
 config.colors = {
@@ -40,25 +40,25 @@ config.cursor_thickness = '0.08cell'
 
 -- Do not omit timeout_milliseconds - it defaults to 1000, but I want to make its existence explicit.
 config.leader = {
-  key = 'b', -- to match the letter in default tmux prefix
-  mods = 'SUPER',
-  timeout_milliseconds = 1000,
+    key = 'b', -- to match the letter in default tmux prefix
+    mods = 'SUPER',
+    timeout_milliseconds = 1000,
 }
 
 -- From https://wezterm.org/config/lua/pane/move_to_new_window.html, but with the keybinding modified.
 config.keys = {
-  {
-    key = 'l',
-    mods = 'SUPER',
-    action = wezterm.action.ShowLauncher,
-  },
-  {
-    key = 'n', -- in honor of CMD+n being the default shortcut to introduce a new window in many macOS apps
-    mods = 'LEADER',
-    action = wezterm.action_callback(function(win, pane)
-      local tab, window = pane:move_to_new_window()
-    end),
-  },
+    {
+        key = 'l',
+        mods = 'SUPER',
+        action = wezterm.action.ShowLauncher,
+    },
+    {
+        key = 'n', -- in honor of CMD+n being the default shortcut to introduce a new window in many macOS apps
+        mods = 'LEADER',
+        action = wezterm.action_callback(function(win, pane)
+            local tab, window = pane:move_to_new_window()
+        end),
+    },
 }
 
 -- Always prompt before closing tabs? Not what I want,
@@ -77,7 +77,7 @@ return config
 -- Me:
 -- > I’m a little disappointed in WezTerm, but I want to give its remote multiplexer daemon feature a try because I don’t much like tmux.
 -- Jacob:
--- > What were you expecting/hoping for from WezTerm exactly that it didn't provide? 
+-- > What were you expecting/hoping for from WezTerm exactly that it didn't provide?
 -- Me:
 -- > Mouse-draggable tabs, responding to control-click just like right click on the UI, a UI tab bar that isn’t laggy, and a consistently working visual bell that changes only the cursor (that last thing is not something I know how to get anywhere else, but it’s advertised in the docs but mysteriously only works intermittently).
 -- Open question - how configurable are these issues? Specifically the first 2.
@@ -87,5 +87,3 @@ return config
 -- > This matters especially to me because I don’t want normal termination of the process to close the pane, but I do want a keyboard-driven way to close panes.
 -- > I have a theory as to why - WezTerm probably doesn’t really know what processes I’m running on the remote end, so it can’t apply the same logic to detect whether it should let me kill it sans confirmation.
 -- > At the very least, this is a documentation error.
-
-
