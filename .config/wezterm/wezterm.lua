@@ -34,14 +34,20 @@ config.colors = {
 -- Disable "most ligatures" (https://wezterm.org/config/font-shaping.html#advanced-font-shaping-options):
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 
--- Leave pane open on program exit:
-config.exit_behavior = 'Hold'
 
 -- Makes my "insert mode" (line-shaped) cursor slightly thicker. Can make text harder to read.
 --
 -- Also makes the cursor outline slightly thicker on an unfocused window,
 -- which was not the intent, but go off I guess.
 config.cursor_thickness = '0.08cell'
+
+-- # Terminal "chrome" interactivity configuration:
+
+-- Leave pane open on program exit:
+config.exit_behavior = 'Hold'
+
+-- Cooperate with my [Interstellar mouse](https://www.youtube.com/watch?v=aANF2OOVX40) (same brand, different model :))
+config.mouse_wheel_scrolls_tabs = false
 
 -- # Keybinds:
 -- I always refer to the key [known in wezterm configs as 'SUPER', 'CMD', or 'WIN'](https://wezterm.org/config/keys.html#configuring-key-assignments) by its brand-agnostic name 'SUPER'.
