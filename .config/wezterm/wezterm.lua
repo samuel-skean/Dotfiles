@@ -43,6 +43,8 @@ config.cursor_thickness = '0.08cell'
 
 -- # Terminal "chrome" interactivity configuration:
 
+-- BEEG bug: After using SUPER+W (a default shortcut) to kill the current tab, the tab bar does not reset until SUPER is released. This contributes greatly to my feeling of WezTerm's jank. Also, I can't think why it'd be intended. In the default (and current) configuration, the tab bar reflects the existence (and selection!) of a non-existent tab, and the numbers of any tabs after it do not refer to the tabs they label for the purposes of SUPER+<num> shortcuts.
+
 -- Leave pane open on program exit:
 config.exit_behavior = 'Hold'
 
