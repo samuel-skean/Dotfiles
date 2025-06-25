@@ -45,13 +45,13 @@ config.leader = {
     timeout_milliseconds = 1000,
 }
 
--- From https://wezterm.org/config/lua/pane/move_to_new_window.html, but with the keybinding modified.
 config.keys = {
     {
         key = 'l',
         mods = 'SUPER',
         action = wezterm.action.ShowLauncher,
     },
+    -- From https://wezterm.org/config/lua/pane/move_to_new_window.html, but with the keybinding modified:
     {
         key = 'n', -- in honor of CMD+n being the default shortcut to introduce a new window in many macOS apps
         mods = 'LEADER',
