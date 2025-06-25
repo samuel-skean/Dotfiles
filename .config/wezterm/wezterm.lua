@@ -11,6 +11,12 @@ config.quit_when_all_windows_are_closed = false
 -- TODO: Is there a way to tell if I ever exceed this?
 config.scrollback_lines = 1000000
 
+-- TODO: Is there a way to ensure 'SUPER' never gets passed?
+-- I'd like to use the kitty keyboard protocol with `fish`, but it's just too broken. Here's someone else's bug report with git-delta that I can replicate on WezTerm with `enable_kitty_keyboard == true` under fish: https://github.com/fish-shell/fish-shell/discussions/11051#discussion-7828689
+-- I've only gotten that bug to happen with all 3 of those things the case. Haven't tested any other terminal emulators, but I've tested the rest of that matrix.
+-- But I've found more bugs that I'd be more likely to run into. Not necessarily reproducible (I haven't tried), but I was able to make it so that the up and down arrows weren't respected in bash after having run fish with this setting enabled. Weirdly, they changed my cursor from block to vertical line (I use vi mode in bash, so that's not crazy unexpected). Not cool!
+-- config.enable_kitty_keyboard = true
+
 -- Bell:
 config.audible_bell = 'Disabled'
 config.visual_bell = {
