@@ -1,4 +1,0 @@
-# Almost completely redundant because of the same rule in `~/.gitignore`, but still helps clarity, I think. Also, there's no reason I'd want to track `~/.local/.bashrc`, but I definitely want to track `~/.bashrc`, and this makes that clear.
-*
-
-!bin/
