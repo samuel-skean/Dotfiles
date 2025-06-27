@@ -12,12 +12,16 @@
 # Should be alphabetized (enforced by pre-commit hook, but that's not currently linked to this repo):
 .bash_history*
 .bash_logout
+.bash_sessions/
+.cache/
 .cargo/
 # No idea what this is:
 .CFUserTextEncoding
 # The history of my `less` searches! And maybe other things in `less`:
 .lesshst
 .local/
+.metals/
+.npm/
 .nvm/
 .psql_history
 .pyenv/
