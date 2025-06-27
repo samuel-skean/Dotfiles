@@ -53,7 +53,7 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-. "${HOME}/.cargo/env"
+[[ ! -r "${HOME}/.cargo/env" ]] || . "${HOME}/.cargo/env"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
