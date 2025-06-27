@@ -146,7 +146,7 @@ function __skean_print_pipe_status {
             local -r color="${failure_red}"
         fi
 
-        printf "${color}${1}\e[00m"
+        printf "${color}%s\e[00m" "${1}"
     }
     echo -n "$(colorize_status "${temp_pipestatus[0]}")"
     for status in "${temp_pipestatus[@]:1}"; do
