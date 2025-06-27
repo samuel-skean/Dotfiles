@@ -83,15 +83,15 @@ if [ -n "${force_color_prompt}" ]; then
 fi
 
 if [ "${color_prompt}" = yes ]; then
-    garish_green='\033[01;32m'
-    nicer_light_blue='\033[01;36m'
+    garish_green='\e[01;32m'
+    nicer_light_blue='\e[01;36m'
     if [[ "${is_macos}" == '1' ]]; then
         hostname_color="${nicer_light_blue}"
     else
         hostname_color="${garish_green}"
     fi
     # TODO: Can I add {}'s in here around some instances of debian_chroot? is it as necessary/nice to preemptively avoid ambiguity as it is elsewhere?
-    PS1='${debian_chroot:+($debian_chroot)}\['"${garish_green}"'\]\u@\['"${hostname_color}"'\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\['"${garish_green}"'\]\u@\['"${hostname_color}"'\]\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ '
     unset garish_green nicer_light_blue hostname_color
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -138,15 +138,15 @@ export EDITOR="/usr/bin/env nvim"
 function __skean_print_pipe_status {
     local -a temp_pipestatus=("${PIPESTATUS[@]}")
     function colorize_status {
-        local -r success_green='\033[01;32m'
-        local -r failure_red='\033[01;31m'
+        local -r success_green='\e[01;32m'
+        local -r failure_red='\e[01;31m'
         if [[ "${1}" == "0" ]]; then
             local -r color="${success_green}"
         else
             local -r color="${failure_red}"
         fi
 
-        printf "${color}${1}\033[00m"
+        printf "${color}${1}\e[00m"
     }
     echo -n "$(colorize_status "${temp_pipestatus[0]}")"
     for status in "${temp_pipestatus[@]:1}"; do
@@ -157,7 +157,7 @@ function __skean_print_pipe_status {
 
 PROMPT_COMMAND='__skean_print_pipe_status'
 # Set the cursor to a vertical line before invoking a command.
-PS0=$'\x1b[6 q'
+PS0=$'\e[6 q'
 
 # Just to support a copy of postgresql that I installed on my mac in a non-package-managed way for CS 480 (Databases).
 # This should likely be removed, but for now, it's better to have it and not need it, yada yada.
