@@ -69,7 +69,7 @@
     //    "**/.hg",
     //    "**/.jj",
     //    "**/CVS",
-    // I don't want zed to ignore .DS_Store by default. I want it to show up just like other .gitignored files. This is so I'm more likely to see if I'm not ignoring it.
+    // I don't want zed to ignore .DS_Store by default. I want it to show up just like other .gitignored files. This is so I'm more likely to see if I'm not ignoring it in VCS.
     //    "**/.DS_Store",
     "**/Thumbs.db",
     "**/.classpath",
