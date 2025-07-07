@@ -75,6 +75,13 @@
     "**/.classpath",
     "**/.settings"
   ],
+  // The OpenType features to enable for text in the editor.
+  "buffer_font_features": {
+    // Disable ligatures:
+    // I tried em out, but then they became annoying for things like character ranges in `tr`. It's a shame that makes `//` slightly uglier - that ligature was entirely inoffensive - but I'm not trying to micromanage this font right now :).
+    // Looks like I'll have to switch fonts to disable them on Linux?? I sure am glad I'm not using GUI Linux right now! Here's a github issue thread that, at time of writing, ends in complaints about this setting's ineffectiveness on Linux: https://github.com/zed-industries/zed/issues/6000
+    "calt": false
+  },
 
   // I currently only have zed installed as a cask via brew. I intend to keep zed managed by package managers wherever I use it. I don't want it auto-updating.
   "auto_update": false
