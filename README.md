@@ -13,8 +13,8 @@ Here is how I administer/clone my dotfiles to a new machine. These instructions 
 - Shell configuration will (as a rule) only apply to new *login* shells launched *at this point*.
 
 - If you *know* the contents of `README.md` that you want to preserve are all already committed to the repo, you can run `git-df update-index --skip-worktree README.md && rm README.md` to remove it from your home directory.
-I learned this from [this article](https://gitbetter.substack.com/i/113695216/using-update-index). CONSIDER: Using [`git-sparse-checkout`](https://git-scm.com/docs/git-sparse-checkout) - [`man git-update-index`](https://git-scm.com/docs/git-update-index) recommends it for this sorta thing.
-- If you've followed the above bullet point, then to *edit* `README.md`, run `git-df update-index --no-skip-worktree README.md && git-df checkout -- README.md`.
+I learned this from [this article](https://gitbetter.substack.com/i/113695216/using-update-index). CONSIDER: Using [`git-sparse-checkout`](https://git-scm.com/docs/git-sparse-checkout) - [`man git-update-index`](https://git-scm.com/docs/git-update-index) recommends it for this sorta thing. Run the same thing with `LICENSE.txt` to do the same for it.
+- If you've followed the above bullet point, then to *edit* `README.md`, run `git-df update-index --no-skip-worktree README.md && git-df checkout -- README.md`. If you're contributing to this repo, don't edit `LICENSE.txt`.
 
 Do this *before* committing on a new machine:
 - Make sure you don't care about any files matching the shell glob `~/Dotfiles.git/hooks/*.sample`. You almost certainly don't - they're samples that `git` can regenerate at any time unless you messed with them. Then run `~/.samuel_skean_dotfiles_miscellanea/install_git_hooks.bash`.
@@ -30,3 +30,8 @@ Normative:
 
 
 - Consider switching to [`yadm`](https://yadm.io/) (Yet Another Dotfiles Manager) or similar purpose-built software that uses an otherwise desirable version control system.
+
+## NOTE ON LICENSING:
+`LICENSE.txt` takes precedence over anything else in this repository when it comes to defining the license of this code.
+But in case the bit in the license about "machine-executable object code" seems confusing (this repo is almost all config files and script files) then please just distribute the code with the same license attached.
+If you do find a way to derive "machine-executable object code" from this repo, be my guest and omit the license text if you so desire :).
