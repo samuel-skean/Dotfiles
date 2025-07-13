@@ -13,9 +13,9 @@ Here is how I administer/clone my dotfiles to a new machine. These instructions 
 - Run `git-df submodule init && git-df submodule update` to establish the contents of submodules in the working tree. TODO: Why doesn't `--recurse-submodules` cut it from the initial clone, or if added to the `checkout` step(s).
 - Shell configuration will (as a rule) only apply to new *login* shells launched *at this point*.
 
-- If you *know* the contents of `README.md` that you want to preserve are all already committed to the repo, you can run `git update-path --skip-worktree README.md && rm README.md` to remove it from your home directory.
-I learned this from https://gitbetter.substack.com/i/113695216/using-update-index. CONSIDER: Using [`git-sparse-checkout`](https://git-scm.com/docs/git-sparse-checkout) - the man pages for `git update-path` recommend it for this sorta thing.
-- If you've followed the above bullet point, then to *edit* `README.md`, run `git update-path --no-skip-worktree README.md && git checkout -- README.md`.
+- If you *know* the contents of `README.md` that you want to preserve are all already committed to the repo, you can run `git-df update-index --skip-worktree README.md && rm README.md` to remove it from your home directory.
+I learned this from [this article](https://gitbetter.substack.com/i/113695216/using-update-index). CONSIDER: Using [`git-sparse-checkout`](https://git-scm.com/docs/git-sparse-checkout) - [`man git-update-index`](https://git-scm.com/docs/git-update-index) recommends it for this sorta thing.
+- If you've followed the above bullet point, then to *edit* `README.md`, run `git-df update-index --no-skip-worktree README.md && git-df checkout -- README.md`.
 
 Do this *before* committing on a new machine:
 - Make sure you don't care about any files matching the shell glob `~/Dotfiles.git/hooks/*.sample`. You almost certainly don't - they're samples that `git` can regenerate at any time unless you messed with them. Then run `~/.samuel_skean_dotfiles_miscellanea/install_git_hooks.bash`.
