@@ -1,5 +1,7 @@
 # This repo does use at least one `.gitignore` file in a nested directory in the same repo.
 
+# See README.md (in the repo if not the working tree) for how it can be sanely kept out of the home directory, except when editing it. This note is here in case you think that technique has something to do with `.gitignore` - fair perception, `git` is weird.
+
 *
 
 # This line is also responsible for allowing some files to be tracked in `.config and `.local`.
