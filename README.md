@@ -1,7 +1,6 @@
 My unix (macOS and Debian Linux, currently) dotfiles. A work in progress. No effort will be made to make this to anyone's taste - or really, for anyone's use - but mine.
 
-This directory exists to collect the files related to administering my dotfiles repo that are not dotfiles themselves. They are "meta" files, if you will.
-
+The directory `.samuel_skean_dotfiles_miscellanea` exists to collect the files related to administering my dotfiles repo that are not dotfiles themselves. They are "meta" files, if you will.
 
 Here is how I administer/clone my dotfiles to a new machine. These instructions might be incomplete or incorrect, but they did work once.
 
