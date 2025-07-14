@@ -1,5 +1,5 @@
-require("samuelskean.remap")
-require("samuelskean.fourSpaceTabs")
+require("samuel-skean.remap")
+require("samuel-skean.fourSpaceTabs")
 
 -- Enable hybrid line numbers (absolute number on the current line,
 -- relative number elsewhere):
@@ -9,4 +9,3 @@ vim.o.relativenumber = true
 -- Enable showing dots on trailing whitespace:
 vim.o.listchars = "trail:·"
 vim.o.list = true
-

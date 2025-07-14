@@ -1,6 +1,6 @@
 My unix (macOS and Debian Linux, currently) dotfiles. A work in progress. No effort will be made to make this to anyone's taste - or really, for anyone's use - but mine.
 
-The directory `.samuel_skean_dotfiles_miscellanea` exists to collect the files related to administering my dotfiles repo that are not dotfiles themselves. They are "meta" files, if you will.
+The directory `.samuel-skean-dotfiles-miscellanea` exists to collect the files related to administering my dotfiles repo that are not dotfiles themselves. They are "meta" files, if you will.
 
 Here is how I administer/clone my dotfiles to a new machine. These instructions might be incomplete or incorrect, but they did work once.
 
@@ -17,7 +17,7 @@ I learned this from [this article](https://gitbetter.substack.com/i/113695216/us
 - If you've followed the above bullet point, then to *edit* `README.md`, run `git-df update-index --no-skip-worktree README.md && git-df checkout -- README.md`. If you're contributing to this repo, don't edit `LICENSE.txt`.
 
 Do this *before* committing on a new machine:
-- Make sure you don't care about any files matching the shell glob `~/Dotfiles.git/hooks/*.sample`. You almost certainly don't - they're samples that `git` can regenerate at any time unless you messed with them. Then run `~/.samuel_skean_dotfiles_miscellanea/install_git_hooks.bash`.
+- Make sure you don't care about any files matching the shell glob `~/Dotfiles.git/hooks/*.sample`. You almost certainly don't - they're samples that `git` can regenerate at any time unless you messed with them. Then run `~/.samuel-skean-dotfiles-miscellanea/install-git-hooks.bash`.
 
 # How to Modify:
 
