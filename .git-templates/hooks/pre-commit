@@ -1,0 +1,6 @@
+#!/bin/sh
+# Example: prevent commits with TODONOWs
+if git diff --cached | grep -i 'TODONOW'; then
+  echo "❌ Commit blocked: found TODONOWs in staged changes."
+  exit 1
+fi
