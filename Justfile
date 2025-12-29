@@ -38,7 +38,7 @@ normal-install: install install-hooks hide-meta
 # Clean sample hooks and install custom ones
 install-hooks:
     @echo "Installing git hooks..."
-    rm -f {{git_dir}}/hooks/*.sample || true
+    find {{git_dir}}/hooks/ -name "*.sample" -delete
     bash {{miscellanea_dir}}/install-git-hooks.bash
 
 # Hide README/LICENSE from $HOME
