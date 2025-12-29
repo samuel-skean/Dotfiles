@@ -14,7 +14,7 @@ default:
 
 # Clone the bare repository
 clone git_url=default_repo:
-    git clone --bare --recurse-submodules {{url}} {{git_dir}}
+    git clone --bare --recurse-submodules {{git_url}} {{git_dir}}
 
 # 1. Install dotfiles (Warning: clobbers existing files in $HOME)
 install:
