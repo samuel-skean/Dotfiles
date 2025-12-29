@@ -6,15 +6,15 @@ git_dir := home_dir() + "/Dotfiles.git"
 work_tree := home_dir()
 miscellanea_dir := work_tree + "/.samuel-skean-dotfiles-miscellanea"
 git_df := "git --git-dir=" + git_dir + " --work-tree=" + work_tree
-default_repo := "git@github.com:username/Dotfiles.git"
+default_repo := "https://github.com/samuel-skean/Dotfiles.git"
 
 # Default: list commands
 default:
     @just --list
 
 # Clone the bare repository
-clone git_url=default_repo:
-    git clone --bare --recurse-submodules {{git_url}} {{git_dir}}
+clone url=default_repo:
+    git clone --bare --recurse-submodules {{url}} {{git_dir}}
 
 # 1. Install dotfiles (Warning: clobbers existing files in $HOME)
 install:
