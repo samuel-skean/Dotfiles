@@ -1,10 +1,13 @@
 My unix (macOS and Debian Linux, currently) dotfiles. A work in progress. No effort will be made to make this to anyone's taste - or really, for anyone's use - but mine.
 
+They won't work for anyone but me because of credentials issues.
+
 The directory `.samuel-skean-dotfiles-miscellanea` exists to collect the files related to administering my dotfiles repo that are not dotfiles themselves. They are "meta" files, if you will.
 
 Here is how I administer/clone my dotfiles to a new machine. These instructions might be incomplete or incorrect, but they did work once.
 
 - Use `bash`. Change directory to `${HOME}`.
+- Make sure the machine you're on has a private ssh key that works for github as me.
 - If on debian, run `sudo apt install curl build-essential git`. On other distros, run equivalent commands to install the same things. `build-essential` is only necessary if you use `cargo-binstall`, but I always end up wanting it.
 - Install rust, then just.
   - Rust: https://rust-lang.org/tools/install/
