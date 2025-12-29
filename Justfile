@@ -20,7 +20,8 @@ clone url=default_repo:
 install:
     @echo "Clobbering files in {{work_tree}} with repository versions..."
     {{git_df}} fetch origin
-    {{git_df}} remote set-head origin -a
+    {{git_df}} update-ref refs/remotes/origin/main FETCH_HEAD
+    {{git_df}} symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
     {{git_df}} reset --hard origin/HEAD
     {{git_df}} restore --staged ./
     {{git_df}} restore ./
