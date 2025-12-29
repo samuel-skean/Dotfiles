@@ -5,11 +5,12 @@ The directory `.samuel-skean-dotfiles-miscellanea` exists to collect the files r
 Here is how I administer/clone my dotfiles to a new machine. These instructions might be incomplete or incorrect, but they did work once.
 
 - Use `bash`. Change directory to `${HOME}`.
+- If on debian, run `sudo apt install curl build-essential git`. On other distros, run equivalent commands to install the same things. `build-essential` is only necessary if you use `cargo-binstall`, but I always end up wanting it.
 - Install rust, then just.
   - Rust: https://rust-lang.org/tools/install/
   - Just: Run `cargo install just`.
-    - If installing via cargo-binstall instead, be sure to install a c compiler first. (`sudo apt install build-essential` does the trick on debian).
-- Download the Justfile. (Currently, `curl https://raw.githubusercontent.com/samuel-skean/Dotfiles/refs/heads/main/Justfile > Justfile`)
+    - If installing via cargo-binstall instead, be sure to install a c compiler first.
+- Download the Justfile. (Currently, `curl -H "Cache-Control: no-cache" -H "Pragma: no-cache" https://raw.githubusercontent.com/samuel-skean/Dotfiles/refs/heads/main/Justfile > Justfile`)
 - Run `just clone && just normal-install` from the home directory.
 
   (NOTE: This only works if the repo is still on Github at https://github.com/samuel-skean/Dotfiles.git. If it's moved, run `just clone <new_git_url> && just normal-install` instead.)
