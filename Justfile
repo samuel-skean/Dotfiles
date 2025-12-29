@@ -19,7 +19,7 @@ clone url=default_repo:
 # 1. Install dotfiles (Warning: clobbers existing files in $HOME)
 install:
     @echo "Clobbering files in {{work_tree}} with repository versions..."
-    git reset --hard origin/main
+    {{git_df}} reset --hard origin/main
     {{git_df}} restore --staged ./
     {{git_df}} restore ./
     {{git_df}} submodule init
