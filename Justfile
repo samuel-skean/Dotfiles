@@ -26,8 +26,8 @@ install:
     @echo "Installation complete."
 
 # 2. A normal way to install everything.
-normal-install: install-hooks hide-meta
-    @echo "Normal install complete: Hooks installed and meta-files hidden."
+normal-install: install install-hooks hide-meta
+    @echo "Normal install complete: Dotfiles installed, hooks installed and meta-files hidden."
 
 # --- Internal/Supporting Recipes ---
 

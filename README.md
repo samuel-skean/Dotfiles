@@ -6,7 +6,10 @@ Here is how I administer/clone my dotfiles to a new machine. These instructions 
 
 - Use `bash`. Change directory to `${HOME}`.
 - Install rust, then just.
-- Download the Justfile.
+  - Rust: https://rust-lang.org/tools/install/
+  - Just: Run `cargo install just`.
+    - If installing via cargo-binstall instead, be sure to install a c compiler first. (`sudo apt install build-essential` does the trick on debian).
+- Download the Justfile. (`curl https://raw.githubusercontent.com/samuel-skean/Dotfiles/refs/heads/main/Justfile > Justfile`)
 - Run `just normal-install` from the home directory.
 
 # How to Modify:
