@@ -7,6 +7,7 @@
 # This line is also responsible for allowing some files to be tracked in `.config and `.local`.
 # (Each of those have their own `.gitignore`s to actually allow files in them that *don't* themselves start with . to be tracked.)
 # See https://git-scm.com/docs/gitignore#:~:text=It%20is%20not%20possible%20to%20re%2Dinclude%20a%20file%20if%20a%20parent%20directory%20of%20that%20file%20is%20excluded.%20Git%20doesn%E2%80%99t%20list%20excluded%20directories%20for%20performance%20reasons%2C%20so%20any%20patterns%20on%20contained%20files%20have%20no%20effect%2C%20no%20matter%20where%20they%20are%20defined.
+!Justfile
 !.*
 .DS_Store
 .Trash*
@@ -33,3 +34,4 @@
 .vscode-server/
 .wget-hsts
 .zsh_history
+.restic/
